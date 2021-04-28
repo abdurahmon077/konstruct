@@ -107,6 +107,8 @@ a {
     margin-top: 55px;
 }
 .section__about_title {
+    display: flex;
+    justify-content: center; 
     text-align: center;
     position: relative;
     font-size: 18px;
@@ -119,7 +121,6 @@ a {
     height: 2px;
     background: #00A4E5;
     top: 32px;
-    left: 471px;
 }
 .section__about_story {
     margin-top: 92px;

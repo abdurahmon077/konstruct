@@ -4,17 +4,33 @@
 /* @media (max-width: 1290px) {} */
 /* @media (max-width: 1140px) {} */
 /* @media (max-width: 1024px) {} */
-/* @media (max-width: 992px) {} */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+
+    .capabilities_boxes {
+        scroll-snap-type: x mandatory;
+        overflow: auto;
+        column-gap: 30px;
+    }
+    .capabilities_boxes_box {
+        scroll-snap-align: center;
+        flex-shrink: 0;
+
+    }
+}
+@media (max-width: 892px) {
+    .section__about_story {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+        margin-top: 30px;
+    }
+    .section__about_story_texts {
+        order: 1;
+    }
+    
     .section__about_story {
         flex-wrap: wrap;
         justify-content: center;
-    }
-    .section__about_title::before {
-        left: 46%;
-    }
-    .section__about_story {
-        margin-top: 50px;
     }
     .section__about_story_texts {
         display: flex;
@@ -22,23 +38,30 @@
         align-items: center;
     }
     .section__about_story_texts_title {
-        width: 540px;
+        max-width: 540px;
+        width: 100%;
         text-align: center;
     }
     .section__about_story_texts_txt {
         text-align: center;
         width: 88%;
     }
-    .section__about_story_cards {
-        margin-top: 60px;
-        gap: 40px;
+    .capabilities_subject {
+        flex-direction: column;
+        row-gap: 30px;
     }
+    .footer__menu_p {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 768px) {
     .capabilities_subject {
         flex-wrap: wrap;
         row-gap: 30px;
     }
     .capabilities_subject_txt {
-        width: 645px;
+        max-width: 645px;
+        width: 100%;
     }
     .capabilities_subject {
         margin: 85px 0 75px 0;
@@ -52,7 +75,8 @@
         flex-shrink: 0;
     }
     .section_end {
-        height: 370px;background-position: center;
+        height: 370px;
+        background-position: center;
     }
     .footer__menu_p {
         flex-wrap: wrap;
@@ -61,6 +85,9 @@
 @media (max-width: 736px) {
     .header__title_sub {
         font-size: 48px;
+    }
+    .footer__menu_p {
+        row-gap: 30px;
     }
 }
 /* @media (max-width: 734px) {} */
@@ -84,9 +111,6 @@
         height: unset;
         padding: 30px 0;
     }
-    .footer__menu_p {
-        row-gap: 30px;
-    }
 }
 @media (max-width: 667px) {
 
@@ -101,11 +125,42 @@
         width: 300px;   
     }
 }
-/* @media (max-width: 576px) {} */
+@media (max-width: 576px) {
+    .capabilities_subject_txt {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .newsletter {
+        flex-direction: column;
+    }
+    .newsletter__title_email {
+        display: flex;
+        align-items: center;
+    }
+    .sign_up  {
+        max-width: 100px;
+        width: 100%;
+        height: 100%;
+    }
+    .section__about_story_cards {
+        width: 100%;
+    }
+    .section__about_story_cards_card {
+        width: 33%;
+        overflow: hidden;
+    }
+    .card__image {
+        width: 100%;
+    }
+    .section__about_story_cards_card_title  {
+        font-size: 20px;
+    }
+}
 @media (max-width: 414px) {
 
     .header__title_sub {
-        font-size: 34px;
+        font-size: 30px;
+        font-weight: 400;
     }
     .header__title_txt {
         font-size: 13px;
@@ -124,9 +179,12 @@
     .header__nav::before {
         top: 51px;
     }
+    .header__nav::before {
+        top: 40px;
+    }
     .header__nav_menu {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         position: relative;
         display: flex;
         align-items: center;
@@ -156,19 +214,12 @@
     .section__about_story_texts_title {
         width: unset;
     }
-    .section__about_story_cards {
-        gap: unset;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .section__about_story_cards_card {
-        width: 125px;
-        height: 195px;
-        overflow: hidden;
-    }
     .section__btn {
         width: 150px;
     }  
+    .section__about_story_cards {
+        gap: 2px;
+    }
     .section__about_story_cards_card_title {
         font-size: 22px;
     }
